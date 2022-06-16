@@ -7,3 +7,6 @@ A simple MVC Framework created using nodejs and express.
 3. Open Ubuntu(wsl) terminal. Type "redis-server" -> This will start redis server
 4. On command prompt terminal, type "nodemon app.js" this will start the app.
 5. Open browser, and go to localhost:1722.
+
+#NAMING CONVENTION FOR CONTROLLER FILES
+- filename should be in plural form. Example: Users
