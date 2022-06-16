@@ -1,5 +1,6 @@
 const routes = require("./routes.js"); //requires the routes.js
 const Profiler = require("./assets/libraries/profiler"); // requires the profiler.js
+const Create_Model_View = require("./assets/libraries/model_views");
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -36,4 +37,5 @@ app.use(session({
     store: new redisStore({ host: "localhost", port: 6379, client: redisClient, ttl: 86400}) //this is for the redis
 }));
 
+Create_Model_View.watch_controller(); //upon creating a controller file, it will create a Directory in the view directory, and a model file in the models directory. 
 app.use('/', Profiler.profile, csrfProtection, routes); //to use the routes with profiler
